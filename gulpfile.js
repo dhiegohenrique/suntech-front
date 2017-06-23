@@ -99,6 +99,7 @@ gulp.task('copyResources', function() {
 
 gulp.task('copyProject', function() {
     var sources = [
+        'public/favicon.ico',
         'node_modules/**',
         '.bowerrc',
         '.gitignore',
