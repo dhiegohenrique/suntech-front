@@ -8,8 +8,10 @@
   },
   "author": "dhiego",
   "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  },
   "devDependencies": {
-    "http-server": "^0.10.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^3.0.4",

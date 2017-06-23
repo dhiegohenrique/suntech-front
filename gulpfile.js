@@ -79,7 +79,7 @@ gulp.task('jsonMinify', function() {
 
 gulp.task('copyFontAwesome', function() {
     return gulp.src('public/vendor/font-awesome/fonts/**/*')
-        .pipe(gulp.dest('dist/public/fonts'));
+        .pipe(gulp.dest('dist/public/font-awesome/fonts'));
 });
 
 gulp.task('copyFontOw', function() {
