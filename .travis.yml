@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+- 7.4.0
+notifications:
+  email: false
+env:
+  global:
+  - NODE_ENV: test
+before_install:
+- npm install -g bower@1.8.0
+- npm install -g gulp@3.9.1
+# - npm install -g karma-cli
+# - npm install -g protractor@5.1.1
+# - webdriver-manager update
+- bower install
+# before_script:
+# - node server &
+# - sleep 10
+script:
+# - karma start config/karma.config.js --single-run --browsers PhantomJS
+- gulp
+- cd dist
+#- protractor config/protractor.js
+  # skip_cleanup: true

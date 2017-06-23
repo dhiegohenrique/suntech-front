@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("weatherapp").service("translateService", translateService);
+angular.module("suntechapp").service("translateService", translateService);
 
 function translateService($http, $q) {
     function getTranslateDescription(description, lang) {

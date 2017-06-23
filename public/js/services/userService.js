@@ -1,8 +1,8 @@
 "use strict";
 
-angular.module("weatherapp").service("weatherService", weatherService);
+angular.module("suntechapp").service("userService", userService);
 
-function weatherService($http, $q) {
+function userService($http, $q) {
     function getWeather(city, lang) {
         var deferred = $q.defer();
 

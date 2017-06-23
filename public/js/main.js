@@ -1,9 +1,8 @@
-angular.module("weatherapp", 
+angular.module("suntechapp", 
         [
             "pascalprecht.translate", 
             "ui.bootstrap",
             "ui.router",
-            "angularMoment",
             "angular.filter"
         ]
 );

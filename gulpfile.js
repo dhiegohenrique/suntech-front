@@ -21,17 +21,11 @@ gulp.task('uglify', function() {
         'public/vendor/bootstrap/dist/js/bootstrap.min.js',
         'public/vendor/angular/angular.min.js',
         'public/vendor/angular-ui-router/release/angular-ui-router.min.js',
-        'public/vendor/angular-sanitize/angular-sanitize.min.js',
         'public/vendor/angular-translate/angular-translate.min.js',
         'public/vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
         'public/vendor/angular-bootstrap/ui-bootstrap.min.js',
         'public/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
-        'public/vendor/ngmap/build/scripts/ng-map.min.js',
-        'public/vendor/moment/min/moment.min.js',
-        'public/vendor/moment/locale/pt-br.js',
-        'public/vendor/moment/locale/es.js',
-        'public/vendor/moment/locale/en-au.js',
-        'public/vendor/angular-moment/angular-moment.min.js',
+        'public/vendor/angular-filter/dist/angular-filter.min.js',
         'public/js/**/*.js'
         ];
 
@@ -43,12 +37,12 @@ gulp.task('uglify', function() {
 });
 
 gulp.task('htmlreplace', function() {
-    return gulp.src('app/views/**/*')
+    return gulp.src('public/index.html')
         .pipe(htmlreplace({
             'css' : 'css/styles.min.css',
             'js': 'js/all.min.js'
         }))
-        .pipe(gulp.dest('dist/app/views'));
+        .pipe(gulp.dest('dist/public'));
 });
 
 gulp.task('htmlmin', function() {
@@ -105,18 +99,14 @@ gulp.task('copyResources', function() {
 
 gulp.task('copyProject', function() {
     var sources = [
-        'app/**',
-        '!**/app/views/**',
-        'config/**',
         'node_modules/**',
-        'script/**',
-        'test/**',
         '.bowerrc',
         '.gitignore',
+        'bower.json',
+        'gulpfile.js',
         '.travis.yml',
         'README.md',
-        'package.json',
-        'server.js'
+        'package.json'
     ];
 
     return gulp.src(sources)

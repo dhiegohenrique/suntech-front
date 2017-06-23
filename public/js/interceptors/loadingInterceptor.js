@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("weatherapp").factory("loadingInterceptor", ["$q", "$injector", loadingInterceptor]);
+angular.module("suntechapp").factory("loadingInterceptor", ["$q", "$injector", loadingInterceptor]);
 
 function loadingInterceptor($q, $injector) {
     return {

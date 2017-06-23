@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("weatherapp").service("loadingService", ["$uibModal", "$templateCache", loadingService]);
+angular.module("suntechapp").service("loadingService", ["$uibModal", "$templateCache", loadingService]);
 
 function loadingService($uibModal, $templateCache) {
     var service = {};

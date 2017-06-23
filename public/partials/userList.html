@@ -12,7 +12,7 @@
             <th class="bg-success text-center" translate="enabled"></th>
         </thead>
         <tbody>
-            <tr ng-repeat="user in users | filterBy: ['name', 'email', 'userName']: city | orderBy: user.id track by $index">
+            <tr ng-repeat="user in users | filterBy: ['name', 'email', 'userName']: filter | orderBy: id track by $index">
                 <td>{{user.id}}</td>
                 <td>{{user.name}}</td>
                 <td>{{user.surName}}</td>

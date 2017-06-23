@@ -23,7 +23,6 @@
     "angular-translate": "^2.15.2",
     "angular-translate-loader-static-files": "^2.15.2",
     "jquery": "^3.2.1",
-    "angular-moment": "^1.0.1",
     "angular-filter": "^0.5.16"
   }
 }

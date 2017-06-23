@@ -2,7 +2,7 @@
 
 var languages = getLanguages();
 
-angular.module("weatherapp")
+angular.module("suntechapp")
 .value("languages", languages)
 .config(["$translateProvider", languageConfig]);
 

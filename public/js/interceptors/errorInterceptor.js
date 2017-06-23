@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("weatherapp").factory("errorInterceptor", ["$q", "$location", "$rootScope", errorInterceptor]);
+angular.module("suntechapp").factory("errorInterceptor", ["$q", "$location", "$rootScope", errorInterceptor]);
 
 function errorInterceptor($q, $location, $rootScope) {
     return {

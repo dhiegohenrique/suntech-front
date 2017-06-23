@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="weatherapp">
+<html ng-app="suntechapp">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
 </head>
 
-<body ng-controller="weatherController" class="body">
+<body ng-controller="suntechController" class="body">
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 col-xs-offset-6 col-sm-offset-9 col-md-offset-10 col-lg-offset-10">
@@ -27,7 +27,7 @@
         <br/>
 
         <a href="/">
-            <div class="row jumbotron title shadow-5" style="background: url('resources/chuva-forte.png')">
+            <div class="row jumbotron title shadow-5" style="background: url('resources/userList.png')">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h2 class="no-padding" translate="title"></h2>
                 </div>
@@ -35,25 +35,15 @@
         </a>
 
         <div class="row">
-            <form name="cityForm" novalidate ng-submit="submitForm(cityForm.$valid)">
-                <div class="col-xs-12 no-padding">
-                    <input type="text" class="form-control" placeholder="{{ 'searchPlaceholder' | translate }}" ng-model="city"
-                    required ng-disabled="spinner" name="name">
-                </div>
-
-                <!--<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 no-padding">
-                    <button type="submit " class="btn btn-primary btn-group-justified " ng-disabled="spinner">
-                        <i class="fa " ng-class="{ 'fa-spinner fa-pulse': spinner, 'fa-search': !spinner} "></i>
-                        {{'search' | translate}}
-                    </button>
-                </div>-->
-            </form>
+            <div class="col-xs-12 no-padding">
+                <input type="text" class="form-control" placeholder="{{ 'filterPlaceholder' | translate }}" ng-model="filter">
+            </div>
         </div>
     </div>
 
     <br/><br/>
 
-    <div ng-include="'partials/validationMessage.html'"></div>
+    <div ng-include="'partials/userList.html'"></div>
 
     <ui-view></ui-view>
 
@@ -66,26 +56,19 @@
     <script src="vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
     <script src="vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
     <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="vendor/angular-filter/dist/angular-filter.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/config/languageConfig.js"></script>
-    <script src="js/controllers/weatherController.js"></script>
+    <script src="js/controllers/suntechController.js"></script>
     <script src="js/controllers/errorMessageController.js"></script>
-    <script src="js/controllers/resultController.js"></script>
-    <script src="js/services/weatherService.js"></script>
+    <script src="js/services/userService.js"></script>
     <script src="js/services/translateService.js"></script>
     <script src="js/services/loadingService.js"></script>
-    <script src="js/directives/directives.js"></script>
     <script src="js/config/interceptorsConfig.js"></script>
     <script src="js/config/templatesConfig.js"></script>
     <script src="js/interceptors/loadingInterceptor.js"></script>
     <script src="js/interceptors/errorInterceptor.js"></script>
-    <script src="js/state/weatherState.js"></script>
-    <script src="vendor/moment/min/moment.min.js"></script>
-    <script src="vendor/moment/locale/pt-br.js"></script>
-    <script src="vendor/moment/locale/es.js"></script>
-    <script src="vendor/moment/locale/en-au.js"></script>
-    <script src="vendor/angular-moment/angular-moment.min.js"></script>
-    <script src="vendor/angular-filter/dist/angular-filter.min.js"></script>
+    <script src="js/state/suntechState.js"></script>
     <!-- endbuild -->
 </body>
 </html>
