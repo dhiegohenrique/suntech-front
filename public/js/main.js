@@ -1,0 +1,9 @@
+angular.module("weatherapp", 
+        [
+            "pascalprecht.translate", 
+            "ui.bootstrap",
+            "ui.router",
+            "angularMoment",
+            "angular.filter"
+        ]
+);
