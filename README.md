@@ -1,8 +1,14 @@
-[![Build Status](https://travis-ci.org/dhiegohenrique/exercise3-node.svg?branch=master)](https://travis-ci.org/dhiegohenrique/exercise3-node)
+[![Build Status](https://travis-ci.org/dhiegohenrique/suntech-front.svg?branch=master)](https://travis-ci.org/dhiegohenrique/suntech-front)
 
-Repositório criado para o exercício 3 usando as tecnologias vistas no livro https://www.casadocodigo.com.br/products/livro-meanw
+Requisitos:
+1) NPM 4.0.5 ou superior (https://www.npmjs.com/get-npm);
+2) http-server (https://www.npmjs.com/package/http-server);
+3) Bower 1.8 ou superior (https://bower.io/);
 
+Para rodar, na pasta raíz, executar:
 1) npm install;
 2) bower install;
-3) a cada commit, serão realizados testes unitários no Travis, se passarem, serão realizados testes 2e2 no Souce Labs, se passarem, o deploy será realizado em weatherconditions.herokuapp.com
-4) para gerar a versão de distribuição: gulp
+3) http-server -p 3001
+A aplicação estará rodando em: http://localhost:3001
+
+A cada commit, serão realizados testes unitários no Travis. Se passarem, o deploy será realizado em https://suntech-front.herokuapp.com
