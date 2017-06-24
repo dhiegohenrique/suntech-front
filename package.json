@@ -10,7 +10,9 @@
   "author": "dhiego",
   "license": "ISC",
   "dependencies": {
-    "http-server": "^0.10.0"
+    "buffer": "^5.0.6",
+    "http-server": "^0.10.0",
+    "mysql-aes": "0.0.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

@@ -4,5 +4,4 @@ angular.module("suntechapp").config(["$httpProvider", interceptorsConfig]);
 
 function interceptorsConfig($httpProvider) {
     $httpProvider.interceptors.push("errorInterceptor");
-    $httpProvider.interceptors.push("loadingInterceptor");
 };

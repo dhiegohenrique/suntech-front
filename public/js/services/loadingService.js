@@ -5,9 +5,10 @@ angular.module("suntechapp").service("loadingService", ["$uibModal", "$templateC
 function loadingService($uibModal, $templateCache) {
     var service = {};
     var instance;
+    var isOpen = false;
 
     service.openModal = function openModal() {
-        if (instance) {
+        if (isOpen) {
             return;
         }
 
@@ -16,16 +17,18 @@ function loadingService($uibModal, $templateCache) {
             size : "sm",
             backdrop : "static"
         });
+
+        isOpen = true;
+        instance.result.finally(function () {
+            isOpen = false;
+        });
     };
 
     service.closeModal = function closeModal() {
-        if (instance === null || instance === undefined) {
-            return;
+        if (isOpen) {
+            instance.close();
         }
-
-        instance.close();
-        instance = null;
     }
 
     return service;
-}
+};

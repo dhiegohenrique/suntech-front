@@ -3,13 +3,23 @@
 angular.module("suntechapp").service("userService", userService);
 
 function userService($http, $q) {
-    function getWeather(city, lang) {
+    function getUsers() {
         var deferred = $q.defer();
+        var urlLocal = "http://localhost:3000/users";
+        var urlHeroku = "https://suntech-back.herokuapp.com/users";
 
-        $http.get("/result/" + city + "?lang=" + lang)
+        $http.get(urlLocal)
             .then(function(response) {
-                deferred.resolve(response.data);
-            }, function(error) {
+                if (response) {
+                    deferred.resolve(response.data);
+                } else {
+                    $http.get(urlHeroku)
+                    .then(function(response) {
+                        deferred.resolve(response.data);
+                    })
+                }
+            })
+            .catch(function(error) {
                 deferred.reject(error);
             });
 
@@ -17,6 +27,6 @@ function userService($http, $q) {
     };
 
     return {
-        "getWeather" : getWeather
+        "getUsers" : getUsers
     }
 }

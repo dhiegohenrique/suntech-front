@@ -5,4 +5,4 @@ angular.module("suntechapp",
             "ui.router",
             "angular.filter"
         ]
-);
+)
