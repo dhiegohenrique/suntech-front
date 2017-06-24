@@ -4,6 +4,7 @@ Requisitos:
 1) NPM 4.0.5 ou superior (https://www.npmjs.com/get-npm);
 2) http-server (https://www.npmjs.com/package/http-server);
 3) Bower 1.8 ou superior (https://bower.io/);
+4) O backend deve estar rodando (https://github.com/dhiegohenrique/suntech-back);
 
 Para rodar, na pasta raíz, executar:
 1) npm install;

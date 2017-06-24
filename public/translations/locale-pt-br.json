@@ -15,5 +15,6 @@
     "pageNotFoundMessage" : "A página solicitada não pôde ser encontrada. Entre em contato com o administrador ou tente novamente.",
     "goHomePage" : "Ir para a página inicial",
     "loading" : "Carregando...",
-    "errorMessage" : "Ocorreu um erro. Entre em contato com o administrador ou tente novamente."
+    "errorMessage" : "Ocorreu um erro. Entre em contato com o administrador ou tente novamente.",
+    "usersNotFound" : "Não foram encontrados usuários."
 }
