@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("suntechapp").service("userService", userService);
+angular.module("suntechapp").service("userService", ["$http", "$q", userService]);
 
 function userService($http, $q) {
     function getUsers() {

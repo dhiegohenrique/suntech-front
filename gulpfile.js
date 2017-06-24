@@ -33,6 +33,7 @@ gulp.task('uglify', function() {
         .pipe(ngAnnotate())
         .pipe(uglify())
         .pipe(concat('all.min.js'))
+        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
         .pipe(gulp.dest('dist/public/js'));
 });
 

@@ -1,8 +1,8 @@
 "use strict";
 
-angular.module("suntechapp").controller("suntechController", ["$scope", "$translate", "userService", "languages", "$state", "translateService", "passwordService", "loadingService", suntechController]);
+angular.module("suntechapp").controller("suntechController", ["$scope", "$translate", "userService", "languages", "$state", "translateService", "loadingService", suntechController]);
 
-function suntechController($scope, $translate, userService, languages, $state, translateService, passwordService, loadingService) {
+function suntechController($scope, $translate, userService, languages, $state, translateService, loadingService) {
     $scope.changeLanguage = function() {
         $translate.use($scope.idLanguage);
     };
